@@ -40,7 +40,7 @@ class DictionaryFragment : Fragment(R.layout.fragment_dictionary) {
     }
 
     private fun setupRecyclerView(){
-        val adapter = DisctionaryAdapter(mutableListOf())
+        val adapter = DictionaryAdapter(mutableListOf())
         binding.productsRecyclerView.apply {
             this.adapter = adapter
             layoutManager = LinearLayoutManager(requireActivity())
@@ -72,7 +72,7 @@ class DictionaryFragment : Fragment(R.layout.fragment_dictionary) {
 
     private fun handleProducts(products: List<LongFormEntity>){
         binding.productsRecyclerView.adapter?.let {
-            if(it is DisctionaryAdapter){
+            if(it is DictionaryAdapter){
                 it.updateList(products)
             }
         }

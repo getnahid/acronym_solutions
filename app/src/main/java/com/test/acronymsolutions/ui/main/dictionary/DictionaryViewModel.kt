@@ -2,8 +2,7 @@ package com.test.acronymsolutions.ui.main.dictionary
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.test.acronymsolutions.domain.common.base.BaseResult
-import com.test.acronymsolutions.domain.dictionary.entity.DictionaryEntity
+import com.test.acronymsolutions.domain.common.BaseResult
 import com.test.acronymsolutions.domain.dictionary.entity.LongFormEntity
 import com.test.acronymsolutions.domain.dictionary.usecase.GetAllMyProductUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

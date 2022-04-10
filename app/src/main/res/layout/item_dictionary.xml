@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="entryObject"
+            type="com.test.acronymsolutions.domain.dictionary.entity.LongFormEntity" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_extra_extra_small"
+        android:background="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/radius_default">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_medium">
+
+            <TextView
+                android:id="@+id/product_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{entryObject.lf}"
+                android:maxLines="3"
+                android:textColor="?android:attr/textColorPrimary" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
