@@ -9,6 +9,6 @@
         android:id="@+id/DictionaryFragment"
         android:name="com.test.acronymsolutions.ui.main.dictionary.DictionaryFragment"
         android:label="@string/main_fragment_home"
-        tools:layout="@layout/fragment_main_home">
+        tools:layout="@layout/fragment_dictionary">
     </fragment>
 </navigation>

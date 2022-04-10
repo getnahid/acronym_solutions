@@ -9,8 +9,7 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.test.acronymsolutions.R
-import com.test.acronymsolutions.databinding.FragmentMainHomeBinding
-import com.test.acronymsolutions.domain.dictionary.entity.DictionaryEntity
+import com.test.acronymsolutions.databinding.FragmentDictionaryBinding
 import com.test.acronymsolutions.domain.dictionary.entity.LongFormEntity
 import com.test.acronymsolutions.ui.common.extension.gone
 import com.test.acronymsolutions.ui.common.extension.showToast
@@ -20,16 +19,16 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 @AndroidEntryPoint
-class DictionaryFragment : Fragment(R.layout.fragment_main_home) {
+class DictionaryFragment : Fragment(R.layout.fragment_dictionary) {
 
-    private var _binding: FragmentMainHomeBinding? = null
+    private var _binding: FragmentDictionaryBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel: HomeMainViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentMainHomeBinding.bind(view)
+        _binding = FragmentDictionaryBinding.bind(view)
         setupRecyclerView()
         observe()
 
